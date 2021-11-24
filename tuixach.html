@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style1.css" />
+    <title>Túi xách</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="margin-header">
+            <ul>
+                <li><a href="#" class="phone">1800 68 48 </a> </li>
+                <li><a href="" class="hotline"> 0908 08 1618 </a> </li>
+                <li><a href="" class="address">16-18 Trương Quốc Dung, P.8, Q.Phú Nhuận, Hồ Chí Minh </a> </li>
+            </ul>
+        </div>
+    </div>
+    <div id="top">
+        <div id="logo">
+            <img src="./img/logo.png" width="300px" />
+        </div>
+        <div id="search">
+            <form action=" " method="">
+                <input type="text" />
+                <input type="submit" value="&nbsp;" />
+            </form>
+        </div>
+        <div id="register">
+            <ul>
+                <li> <a href="" class="res">Đăng kí</a></li>
+                <li> <a href="" class="login">Đăng nhập</a></li>
+                <li>
+                    <a href="" class="cart"> Giỏ hàng</a>
+                    <span class="total">99+</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="banner">
+        <div id="menu-left">
+            <h3>DANH MỤC SẢN PHẨM</h3>
+            <ul class="side-bar">
+                <li><a href="">Khuyến mãi</a></li>
+                <li><a href="">Balo</a>
+                    <ul class="cap_2">
+                        <li>Balo hình cute</li>
+                        <li>Balo Milion</li>
+                        <li>Balo siêu nhân</li>
+                        <li>Balo aquaman</li>
+                        <li>Balo nhân sư</li>
+                        <li>Balo siêu cao thủ</li>
+                        <li>Balo cậu ấm </li>
+                        <li>Balo áo ấm</li>
+                        <li>Balo ông già noel</li>
+                    </ul>
+                </li>
+                <li><a href="">Balo cặp học sinh</a>
+                    <ul class="cap_2">
+                        <li>Balo nặng lắm</li>
+                        <li>Balo công chúa</li>
+                        <li>Balo hoàng tử</li>
+                        <li>Balo quả chuối</li>
+                        <li>Balo quả cam</li>
+                        <li>Balo quả mít</li>
+                        <li>Balo cậu ấm </li>
+                        <li>Balo quả táo</li>
+                        <li>Balo dưa hấu</li>
+                    </ul>
+                </li>
+                <li><a href="">Cặp doanh nhân</a></li>
+                <li><a href="">Túi xách</a></li>
+                <li><a href="">Vali</a></li>
+                <li><a href="">Macat</a></li>
+                <li><a href="">Túi cách nhiệt</a></li>
+                <li><a href="">Túi chống nước</a></li>
+                <li><a href="">Túi áo mưa</a></li>
+                <li><a href="">Túi da gà</a></li>
+                <li><a href="">Balo màu hường</a></li>
+                <li><a href="">Túi nam tính</a></li>
+            </ul>
+        </div>
+        <div id="banner-main">
+            <div class="menu-top">
+                <ul>
+                    <li><a href="">Trang chủ</a></li>
+                    <li><a href="">Giới thiệu</a></li>
+                    <li><a href="">Tin tức </a></li>
+                    <li><a href="">Sản phẩm</a></li>
+                    <li><a href="">Hướng dẫn</a></li>
+                    <li><a href="">Đại lý</a></li>
+                    <li><a href="">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="slider">
+                <img src="./img/s2.jpg" class="slider-item" number="0" />
+                <img src="./img/s1.jpg" class="slider-item" number="1" style="display:none;" />
+
+                <a href="#" class="next">Next</a>
+                <a href="#" class="prev">Prev</a>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+            <script>
+                $(() => {
+
+                    $('.next').click(function() {
+                        changeImage('next');
+                    })
+                    $('.prev').click(function() {
+                        changeImage('prev');
+
+                    })
+                })
+
+                function changeImage(type) {
+                    let imgSelectVisible = $('img.slider-item:visible');
+                    let imgVisible = parseInt(imgSelectVisible.attr('number'));
+                    let eqNumber = type === 'next' ? imgVisible + 1 : imgVisible - 1;
+
+                    if (eqNumber >= $('.slider-item').length) {
+                        eqNumber = 0
+                    }
+
+                    $('img.slider-item').eq(eqNumber).fadeIn();
+                    imgSelectVisible.fadeOut();
+                }
+            </script>
+            <div id="product-new">
+                <h3>SẢN PHẨM MỚI</h3>
+                <ul class="menu-right">
+                    <li><img src="./img/tui1.png"><a href="">Túi lưới thời trang <p> 10000đ</p></a></li>
+                    <li><img src="./img/tui2.png"><a href="">Túi Cuộn Mep </a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="services-wrapper">
+            <div class="container">
+                <div class="service-item">
+                    <div class="icon">
+                        <img width="40px" height="40px" src="./img/f1.png">
+                    </div>
+                    <div class="info">
+                        <h3>FREE SHIPPING</h3>
+                        <p>Giao hàng tận nơi, miễn phí trên toàn quốc</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="icon">
+                        <img width="40px" height="40px" src="./img/f2.png">
+                    </div>
+                    <div class="info">
+                        <h3>SẢN PHẨM</h3>
+                        <p>Sản phẩm chính hãng, bảo hành trên toàn quốc.
+                            <p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="icon">
+                        <img width="40px" height="40px" src="./img/f3.png">
+                    </div>
+                    <div width="100px" class="info" style="padding-right: 76px;">
+                        <h3>HỖ TRỢ 24/7</h3>
+                        <p>1800 6848</p>
+                    </div>
+                </div>
+                <div class="service-item1">
+                    <div class="icon">
+                        <img width="40px" height="40px" src="./img/f4.png">
+                    </div>
+                    <div class="info">
+                        <h3>CHẤT LƯỢNG</h3>
+                        <p>Đảm bảo chất lượng khi mua tại Thế Giới Túi Xách</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-product1">
+            <div class="container-pr">
+                <div class="box-load">
+                    <div class="box-head">
+                        <div class="tittle-head">
+                            <div class="tittle-head1">
+                                <p> KHUYẾN MÃI</p>
+                            </div>
+                        </div>
+                        <ul class="box-tab">
+                            <li style="width: 65px"> 50% OFF</li>
+                            <li style=" width: 65px"> 30% OFF</li>
+                            <li style="background: 0 0"> VALI 4 BÁNH XOAY</li>
+                        </ul>
+                    </div>
+                    <div class="box-content">
+                        <img src="img/baner.jpg" alt="" width="220px" height="500px" style="float: left">
+                        <table class="list-item">
+                            <tr class="list-top">
+                                <td>
+                                    <p> <img src="img/0000.jpg" alt="" width="205px"></p>
+                                    <p> Balo thời trang</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+                                <td>
+                                    <p> <img src="img/0000.jpg" alt="" width="205px"></p>
+                                    <p>Balo thời trang</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+                                <td>
+                                    <p> <img src="img/0000.jpg" alt="" width="205px"></p>
+                                    <p> Balo thời trang</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+                                <td>
+                                    <p> <img src="img/0000.jpg" alt="" width="205px"></p>
+                                    <p> Balo thời trang</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+
+                            </tr>
+                            <tr class="list-bot">
+                                <td>
+                                    <p> <img src="img/0000.jpg" alt="" width="205px"></p>
+                                    <p> Balo thời trang</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+                                <td>
+                                    <p> <img src="img/0000.jpg" alt="" width="205px"></p>
+                                    <p> Balo thời trang</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+                                <td>
+                                    <p> <img src="img/0000.jpg" alt="" width="205px"></p>
+                                    <p> Balo thời trang</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+                                <td>
+                                    <p> <img src="img/0000.jpg" alt="" width="205px"></p>
+                                    <p> Balo thời trang</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="box-load">
+                    <div class="box-head">
+                        <div class="tittle-head">
+                            <div class="tittle-head1">
+                                <p> BALO THỜI TRANG</p>
+                            </div>
+                        </div>
+                        <ul class="box-tab">
+                            <li> BALO SIMPLE CARY</li>
+                            <li> BALO LAPTOP</li>
+                            <li style="background: 0 0"> BALO THỜI TRANG</li>
+                        </ul>
+                    </div>
+                    <div class="box-content">
+                        <img src="img/baner.jpg" alt="" width="220px" height="500px" style="float: left">
+                        <table class="list-item">
+                            <tr class="list-top">
+                                <td>
+                                    <p> <img src="img/00.jpg" alt="" width="205px"></p>
+                                    <p> Balo thời trang xinh đẹp</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+                                <td>
+                                    <p> <img src="img/00.jpg" alt="" width="205px"></p>
+                                    <p> Balo thời trang xinh đẹp</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+                                <td>
+                                    <p> <img src="img/00.jpg" alt="" width="205px"></p>
+                                    <p> Balo thời trang xinh đẹp</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+                                <td>
+                                    <p> <img src="img/00.jpg" alt="" width="205px"></p>
+                                    <p>Balo thời trang xinh đẹp</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+
+                            </tr>
+                            <tr class="list-bot">
+                                <td>
+                                    <p> <img src="img/00.jpg" alt="" width="205px"></p>
+                                    <p> Balo thời trang xinh đẹp</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+                                <td>
+                                    <p> <img src="img/00.jpg" alt="" width="205px"></p>
+                                    <p> Balo thời trang xinh đẹp</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+                                <td>
+                                    <p> <img src="img/00.jpg" alt="" width="205px"></p>
+                                    <p> Balo thời trang xinh đẹp</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+                                <td>
+                                    <p> <img src="img/00.jpg" alt="" width="205px"></p>
+                                    <p>Balo thời trang xinh đẹp</p>
+                                    <p style="color: #08C;font-size: 15px;"> 2.900.000₫</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block-banner">
+            <img src="img/banner1.png" alt="">
+            <img src="img/banner2.png" alt="">
+            <hr width="100%" color="#BABABA" size="1px">
+        </div>
+
+        <div class="footer-top">
+            <table>
+                <tr>
+                    <td style="width: 20%"><img src="img/logo4.png" alt="Đây là logo"></td>
+                    <td style="width: 60%" align="center">
+                        <ul>
+                            <li>Trang chủ</li>
+                            <li>Giới thiệu</li>
+                            <li>Tin tức</li>
+                            <li>Sản phẩm</li>
+                            <li>Hướng dẫn</li>
+                            <li>Đại lí</li>
+                        </ul>
+                    </td>
+                    <td style="width: 20%"><img src="img/footertop.PNG" alt=""></td>
+                </tr>
+            </table>
+        </div>
+        <footer>
+            <div class="background-content">
+                <div class="container-footer">
+                    <div class="background-content_item">
+                        <div class="item-title">
+                            CHÚNG TÔI Ở ĐÂY
+                        </div>
+                        <div class="item-cnt">
+                            <ul>
+                                <li>
+                                    <span> CÔNG TY CỔ PHẦN THẾ GIỚI TÚI XÁCH</span>
+                                </li>
+                                <li>
+                                    <span><img src="img/diachi.PNG" alt="" style="width: 22px">16-18 Trương Quốc Dung, P. 8, <br>
+                                    Q. Phú Nhuận, TP. Hồ Chí Minh</span>
+                                </li>
+                                <li>
+                                    <span><img src="img/phone1.PNG" alt="" style="margin-left: -3px;width: 22px">0908 08 16 18</span>
+                                </li>
+                                <li>
+                                    <span><img src="img/pax.PNG" alt="" style="margin-left: -3px;width: 22px">1800 6848</span>
+                                </li>
+                                <li>
+                                    <span><img src="img/info.PNG" alt="" style="width: 22px;margin-left: -1px">info@thegioituixach.com.vn</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="background-content_item">
+                        <div class="item-title">
+                            VỀ CHÚNG TÔI
+                        </div>
+                        <div class="item-cnt">
+                            <ul>
+                                <li>
+                                    <a href=""><i class="fas fa-chevron-right"></i> Trang chủ</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="fas fa-chevron-right"></i> Giới thiệu</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="fas fa-chevron-right"></i> Tin tức</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="fas fa-chevron-right"></i> Sản phẩm</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="fas fa-chevron-right"></i> Hướng dẫn</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="background-content_item">
+                        <div class="item-title">
+                            CHÍNH SÁCH
+                        </div>
+                        <div class="item-cnt">
+                            <ul>
+                                <li>
+                                    <a href=""><i class="fas fa-chevron-right"></i>  Chính Sách Bảo Hành</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="fas fa-chevron-right"></i>  Chính Sách Bảo Mật</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="fas fa-chevron-right"></i>Chính Sách Đổi Trả</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="fas fa-chevron-right"></i>Chính Sách Vận Chuyển  </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="background-content_item">
+                        <div class="item-title">
+                            HƯỚNG DẪN
+                        </div>
+                        <div class="item-cnt">
+                            <ul>
+                                <li>
+                                    <a href=""><i class="fas fa-chevron-right"></i> Hướng Dẫn Mua Hàng</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="fas fa-chevron-right"></i> Phương Thức Thanh Toán</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="fas fa-chevron-right"></i> Đăng Kí Thành Viên</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </footer>
+</body>
+
+
+
+</html>
